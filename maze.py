@@ -50,7 +50,7 @@ class Maze:
 
     def _break_entrance_and_exit(self):
         entrance = self._cells[0][0]
-        exit = self._cells[self._num_cols - 1][self._num_rows - 1]
+        exit = self._cells[-1][-1]
         
         entrance.has_top_wall = False
         entrance.draw(
