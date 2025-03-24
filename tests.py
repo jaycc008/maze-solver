@@ -27,6 +27,18 @@ class Tests(unittest.TestCase):
             m1._cells[m1._num_cols-1][m1._num_rows-1].has_bottom_wall,
             False
         )
+        self.assertEqual(
+            m1._cells[0][0].visited,
+            False
+        )
+        self.assertEqual(
+            m1._cells[m1._num_cols-1][m1._num_rows-1].visited,
+            False
+        )
+        self.assertEqual(
+            m1._cells[m1._num_cols // 2][m1._num_rows // 2].visited,
+            False
+        )
 
 
 if __name__ == "__main__":
